@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Dinge für den Lasercutter bauen</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+		<style>
+			em { color: #068de9; }
+			strong { color: #068de9; }
+		</style>
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides" style="text-align: left;">
+				<section data-markdown>
+					# Dinge für den Lasercutter bauen
+				</section>
+
+				<section data-markdown>
+					TODO FreeCAD bild
+
+					TODO openscad bild
+
+					TODO build123d bild
+
+					TODO eiffelturmbild
+				</section>
+				<section data-markdown>
+					Was wir heute lernen:
+
+					- Ein (wahrscheinlich) *neues Code-CAD* kennenlernen.
+					- Wie man es *skriptet* (und zu beliebig coolen Dingen bringt).
+
+					Was wir heute nicht machen:
+
+					- Magische Tipps zu OpenSCAD/FreeCAD.
+					- Das einzig wahre, bug-freie CAD entdecken.
+					- Sachen lasern ☹
+				</section>
+
+				<section data-markdown>
+					# Installation
+
+					Erstmal ein *venv* erstellen, damit `pip install` nicht unser System beschmutzt:
+
+					```
+					cd path/to/
+					python -m venv b3d-venv
+					```
+
+					Dann einmal alles (mit scharf) installieren:
+
+					```
+					pip install build123d
+					```
+
+					TODO: vscode screenshots nach https://github.com/bernhard-42/vscode-ocp-cad-viewer
+				</section>
+				<section data-markdown>
+					# Start
+					```
+					source path/to/b3d-venv/bin/activate
+					code --enable-proposed-api ms-toolsai.jupyter \
+					     --enable-proposed-api ms-python
+					```
+
+					TODO screenshot
+				</section>
+
+				<section data-markdown>
+					# Hello-World
+
+					```py
+					# %%
+					from build123d import *
+					from ocp_vscode import *
+					# %%
+					box = Box(10,15,20)
+					show(box)
+					```
+
+				</section>
+
+				<section data-markdown>
+					# Stolperfallen
+
+					In externem Modul etwas geändert? *Jupyterkernel neustarten.*
+				</section>
+
+				<section data-markdown>
+					
+				</section>
+
+				<section data-markdown>
+					
+				</section>
+
+				<section data-markdown>
+					
+				</section>
+
+				<section data-markdown>
+					
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
