@@ -35,8 +35,8 @@ show(part, part2)
 thing = extrude(Rectangle(150, 150), 90, taper = 35)
 thing += extrude(thing.faces().sort_by(Axis.Z)[-1], 120, taper=5)
 
-#thing -= Sphere(36)
-thing -= extrude(Rectangle(70, 70), 30, taper=30)
+thing -= Sphere(36)
+#thing -= extrude(Rectangle(70, 70), 30, taper=30)
 thing -= Location((0,0,48)) * extrude(Rectangle(45, 45), 30, taper=30)
 
 show(thing)
@@ -63,6 +63,8 @@ part, part2 = auto_slot_joint(part, part2, 0.3)
 
 part = lasercut_tools.straighten_cuts(part)[0]
 part2 = lasercut_tools.straighten_cuts(part2)[0]
+
+show(part, part2)
 
 svg = lasercut_tools.make_svg([part, part2], "out/eiffelturm.svg")
 
