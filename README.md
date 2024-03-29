@@ -70,3 +70,5 @@ Troubleshooting:
 _Did everything work? You're ready for the workshop!_
 
 _Any problems? Take your question to the workshop!_
+
+**Spoiler alert: don't look into the .py files if you don't like spoilers.**
