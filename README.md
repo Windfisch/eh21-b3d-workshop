@@ -7,10 +7,14 @@ Use exactly the _eh21-workshop_ branch from https://github.com/Windfisch/build12
 ### Step 1: preparation
 `git clone` this repo and install Visual Studio Code.
 
+Then create and activate a fresh python venv
+
 ```sh
 python -m venv eh21-b3d-venv
 source eh21-b3d-venv/bin/activate
 ```
+
+(Note: do the `source` line in every terminal you open!)
 
 ### Step 2: python and jupyter
 Run `code --enable-proposed-api ms-toolsai.jupyter --enable-proposed-api ms-python` and
@@ -19,7 +23,8 @@ install the "Python" and "Python Debugger" extensions from "ms-python", and the
 
 ![](slides/img/vscode.png)
 
-Choose "File -> Open folder" and open the "eh21-b3d-workshop" directory.
+Choose "File -> Open folder" and open the "eh21-b3d-workshop" directory. (This is where you
+cloned this repo to.)
 
 ### Step 3: build123d and ocp-cad-viewer
 
@@ -29,7 +34,7 @@ Install [ocp-cad-viewer-2.1.1.vsix](https://github.com/bernhard-42/vscode-ocp-ca
 
 Click on the OCP logo ![](slides/img/ocp.png) in the left sidebar and choose "Quickstart build123d".
 
-Then, install the patched build123d version:
+Then (afterwards!), install the patched build123d version:
 
 ```sh
 source eh21-b3d-venv/bin/activate # don't forget if you opened a new terminal
@@ -38,7 +43,7 @@ pip install git+https://github.com/Windfisch/build123d@eh21-workshop
 
 ## Hello World
 
-Create a new python script and type:
+In VsCode, create a new python script and type:
 
 ```sh
 # %%
