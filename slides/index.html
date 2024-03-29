@@ -93,81 +93,8 @@
 				</section>
 				</section>
 
-				<section>
 				<section data-markdown>
 					# Ran ans Gerät!
-				</section>
-
-				<section data-markdown>
-					### Hello-World
-
-					```py
-					# %%
-					from build123d import *
-					from ocp_vscode import *
-					# %%
-					box = Box(10,15,20)
-					show(box)
-					```
-				</section>
-
-				<section data-markdown>
-					### Transformationen / Location
-
-					```py
-					# %%
-					from build123d import *
-					from ocp_vscode import *
-					# %%
-					box = Location((10,0,20)) *  Box(10,15,20)
-					box2 = Location((0,0,0), (45, 45, 0)) * Box(10, 10, 10)
-					show(box, box2)
-					```
-				</section>
-
-				<section data-markdown>
-					### Primitiven
-
-					```py
-					# %%
-					from build123d import *
-					from ocp_vscode import *
-					# %%
-					sph = Location((10,0,20)) *  Sphere(radius = 10)
-					cyl = Location((0,0,0), (45, 45, 0)) * Cylinder(radius = 5, height = 10)
-					show(sph, cyl)
-					```
-				</section>
-
-				<section data-markdown>
-					- select top face
-					- create plane from there
-					- make circle on there
-					- extrude
-					- add together
-					- use debugger
-				</section>
-
-				<section data-markdown>
-					# Stolperfallen
-
-					In externem Modul etwas geändert? *Jupyterkernel neustarten.*
-				</section>
-
-				<section data-markdown>
-					
-				</section>
-
-				<section data-markdown>
-					
-				</section>
-
-				<section data-markdown>
-					
-				</section>
-
-				<section data-markdown>
-					
 				</section>
 			</div>
 		</div>
